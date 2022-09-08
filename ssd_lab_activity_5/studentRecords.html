@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        Login Page
+    </title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function addRow() {
+            var table = document.getElementById("table");
+            var row = table.insertRow(1);
+            row.insertCell(0).innerHTML = document.getElementById('rollNum').value;
+            row.insertCell(1).innerHTML = document.getElementById('sname').value;
+            document.getElementById('rollNum').value='';
+            document.getElementById('sname').value='';
+        }
+        function removeRow() {
+            document.getElementById("myTable").deleteRow(1);
+        }
+    </script>
+</head>
+<body>
+<div class="studentBody">
+    <h1>Students Records</h1>
+    <div class="container">
+        <input type="text" placeholder="Roll number" id="rollNum" class="input" required>
+  
+        <input type="text" placeholder="Student Name" id="sname" class="input" required>
+        <br>
+        <button onclick="addRow()" type="submit" class="button" id="add">Add New</button>
+        <button onclick="removeRow()" type="submit" class="button" id="remove">Delete Last Record</button>
+    </div>
+
+    <table id="table">
+        <tr>
+            <th>Roll Number</th>
+            <th>Students Name</th>
+        </tr>
+    </table>
+</div>
+</body>
+</html>
