@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lab 6  Team Form</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script src="myScript.js">
+        
+        
+
+    </script>
+
+
+</head>
+<body onkeydown="f(event)">
+    <h1>Team Form</h1>
+    <div class="mainBody">
+        <form action="" class="form">
+
+            <label >Manager Name:</label> &nbsp
+            <input type="text" id="manname" required><br>
+
+            <label>Group email</label>  &nbsp
+            <input type="email" id="gemail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required><br>
+            
+            <label >Server username</label> &nbsp
+            <input type="text" id="uname" pattern="(?=.*\d)(?=.*[A-Z]).{2,}" required ><br>
+
+            <label >Server Password</label> &nbsp
+            <input type="password" id="pwd"><br>
+
+            <label >Confirm Password</label> &nbsp
+            <input type="password" id="cpwd" onfocusout="matchPassword()" > <p id="msg"> YOOOO</p>
+            
+            <br>
+
+            <label>Team Lead</label> &nbsp
+
+            <select id="member"required>
+                <option value="Jatin">Jatin</option>
+                <option value="Jugnu">Jugnu</option>
+                <option value="Arun" selected>Arun</option>
+                <option value="Aakash">Aakash</option>
+            </select>
+            <div class="picklist">
+                <div id="leftPicklist">
+                    <li id="li1" draggable="true" ondragstart="drag(event)" value="Aakash">Aakash</li>
+                    <li id="li2" draggable="true" ondragstart="drag(event)" value="Harsi">Harsi</li>
+                    <li id="li3" draggable="true" ondragstart="drag(event)"value="Nikhil">Nikhil</li>
+                    <li id="li4" draggable="true" ondragstart="drag(event)" value="Mayush">Mayush</li>
+                </div>
+                <div id="rightPicklist" ondrop="drop(event)" ondragover="allowDrop(event)" >
+                
+                </div>
+
+            </div>
+            
+            <br>
+            <input type="submit" value="Submit" onclick="show_alert()">
+        </form> 
+
+
+    </div>
+
+</body>
+</html>
